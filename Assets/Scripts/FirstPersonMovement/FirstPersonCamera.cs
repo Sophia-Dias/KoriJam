@@ -19,35 +19,44 @@ public class FirstPersonCamera : MonoBehaviour {
 
     float smoothCoefx = 0.05f;
     float smoothCoefy = 0.05f;
+	
+	float verticalDelta;
+	float horizontalDelta;
 
-    void Start() {
-
+    void Start() 
+	{
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-
     }
 
-    private void LateUpdate() {
+    private void LateUpdate() 
+	{
         transform.position = characterHead.position;
     }
 
-    void Update() {
+    void Update() 
+	{
+        verticalDelta = Input.GetAxisRaw("Mouse Y") * sensitivityY;
+        horizontalDelta = Input.GetAxisRaw("Mouse X") * sensitivityX;
 
-        float verticalDelta = Input.GetAxisRaw("Mouse Y") * sensitivityY;
-        float horizontalDelta = Input.GetAxisRaw("Mouse X") * sensitivityX;
+		SmoothingCamera();
+		LimitCamera();
 
+        characterBody.localEulerAngles = new Vector3(0, rotationX, 0);
+        transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+    }
+
+	void SmoothingCamera()
+	{
         smoothRotx = Mathf.Lerp(smoothRotx, horizontalDelta, smoothCoefx);
         smoothRoty = Mathf.Lerp(smoothRoty, verticalDelta, smoothCoefy);
 
         rotationX += smoothRotx;
         rotationY += smoothRoty;
-
+	}
+	
+	void LimitCamera()
+	{
         rotationY = Mathf.Clamp(rotationY, angleYmin, angleYmax);
-
-        characterBody.localEulerAngles = new Vector3(0, rotationX, 0);
-
-        transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
-
-    }
-
+	}
 }
