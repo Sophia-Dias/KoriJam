@@ -2,24 +2,28 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(MeshRenderer))]
 public class Object : MonoBehaviour
 {
+  [SerializeField] private GameObject baseMesh;
+  [SerializeField] private GameObject outlineMesh;
+  [SerializeField] private AnimatorController animatorController;
+
   Animator animator;
   Rigidbody rb;
   Material outline;
+
   private void OnDrawGizmos()
   {
-    Mesh mesh = GetComponent<MeshFilter>().sharedMesh;
+    Mesh mesh = baseMesh.GetComponent<MeshFilter>().sharedMesh;
     Gizmos.color = Color.red;
-    Gizmos.DrawWireMesh(mesh, 0, transform.position, transform.rotation, transform.localScale);
+    Gizmos.DrawWireMesh(mesh, 0, baseMesh.transform.position, baseMesh.transform.rotation, baseMesh.transform.localScale);
   }
 
   private void Awake()
   {
-    animator = gameObject.GetComponent<Animator>();
-    outline = gameObject.GetComponent<MeshRenderer>().materials[1];
+    outline = outlineMesh.GetComponent<MeshRenderer>().material;
+    animator = outlineMesh.AddComponent<Animator>();
+    animator.runtimeAnimatorController = animatorController;
     rb = gameObject.GetComponent<Rigidbody>();
     rb.useGravity = false;
     rb.isKinematic = true;
