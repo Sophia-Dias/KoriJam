@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 9002944777447461589}
   - component: {fileID: 8897525093556164957}
   - component: {fileID: 8897525093556164954}
+  - component: {fileID: 5386334540967767406}
   m_Layer: 0
   m_Name: Mesa
   m_TagString: Untagged
@@ -223,3 +224,16 @@ MonoBehaviour:
   baseMesh: {fileID: 2017308272015287367}
   outlineMesh: {fileID: 1893551999280945517}
   animatorController: {fileID: 9100000, guid: 6fdf49d0b3e09fb449c5233aa82184ec, type: 2}
+--- !u!65 &5386334540967767406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627544760720459887}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8028136, y: 0.7580036, z: 0.81562185}
+  m_Center: {x: -0.0019206405, y: 0.37451833, z: 0}
