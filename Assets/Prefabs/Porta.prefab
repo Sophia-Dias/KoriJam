@@ -1,75 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!54 &1621287927189890680
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927137215423798062}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &1621287927189890681
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927137215423798062}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.11053872, y: 2.050075, z: 0.2578683}
-  m_Center: {x: -0.44473064, y: 1.021208, z: 0.0041692257}
---- !u!65 &1621287927189890566
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927137215423798062}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.112072945, y: 1.932527, z: 0.25198746}
-  m_Center: {x: 0.44747496, y: 0.961942, z: 0.006131172}
---- !u!65 &1621287927189890567
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927137215423798062}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.11826062, z: 0.25525403}
-  m_Center: {x: 0, y: 1.9908386, z: 0.005641818}
---- !u!114 &1621287927189890683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927137215423798062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd2908fa8d7b352409f2c58bbd3a82bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseMesh: {fileID: 8894612344104357684}
-  outlineMesh: {fileID: 2133687987263726936}
-  animatorController: {fileID: 9100000, guid: 6fdf49d0b3e09fb449c5233aa82184ec, type: 2}
 --- !u!1 &1621287928507839092
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621287928507839092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.46, y: 0, z: 2.63}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1294012738757263764}
@@ -132,6 +62,76 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseMesh: {fileID: 7539411375116129986}
   outlineMesh: {fileID: 5355501777647586431}
+  animatorController: {fileID: 9100000, guid: 6fdf49d0b3e09fb449c5233aa82184ec, type: 2}
+--- !u!54 &1621287927189890680
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927137215423798062}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1621287927189890566
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927137215423798062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.112072945, y: 1.932527, z: 0.25198746}
+  m_Center: {x: 0.44747496, y: 0.961942, z: 0.006131172}
+--- !u!65 &1621287927189890567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927137215423798062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.11826062, z: 0.25525403}
+  m_Center: {x: 0, y: 1.9908386, z: 0.005641818}
+--- !u!65 &1621287927189890681
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927137215423798062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11053872, y: 2.050075, z: 0.2578683}
+  m_Center: {x: -0.44473064, y: 1.021208, z: 0.0041692257}
+--- !u!114 &1621287927189890683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927137215423798062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2908fa8d7b352409f2c58bbd3a82bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMesh: {fileID: 8894612344104357684}
+  outlineMesh: {fileID: 2133687987263726936}
   animatorController: {fileID: 9100000, guid: 6fdf49d0b3e09fb449c5233aa82184ec, type: 2}
 --- !u!1001 &1621287927189890687
 PrefabInstance:
