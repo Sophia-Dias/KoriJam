@@ -169,6 +169,8 @@ GameObject:
   - component: {fileID: 7224070496878866985}
   - component: {fileID: 7191039876163524047}
   - component: {fileID: 7191039876163524046}
+  - component: {fileID: 686319659386043799}
+  - component: {fileID: 2766535979760664627}
   m_Layer: 0
   m_Name: Poltrona
   m_TagString: Untagged
@@ -223,3 +225,29 @@ MonoBehaviour:
   baseMesh: {fileID: 6354249139658150668}
   outlineMesh: {fileID: 886127560846977741}
   animatorController: {fileID: 9100000, guid: 6fdf49d0b3e09fb449c5233aa82184ec, type: 2}
+--- !u!65 &686319659386043799
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8001451208535992467}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9066483, y: 0.61582613, z: 0.92838824}
+  m_Center: {x: 0, y: 0.3069799, z: 0}
+--- !u!65 &2766535979760664627
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8001451208535992467}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.668803, y: 0.29627967, z: 0.18138671}
+  m_Center: {x: 0, y: 0.7611667, z: -0.37340254}
