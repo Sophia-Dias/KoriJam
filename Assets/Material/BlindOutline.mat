@@ -22,10 +22,11 @@ Material:
     m_TexEnvs: []
     m_Floats:
     - Vector1_5EC7D3BA: 0
+    - _DebugMode: 0
     - _OutlineAlpha: 0
     - _OutlineBlend: 5
     - _OutlineScale: 1
     m_Colors:
-    - _ClapPosition: {r: 3.5, g: 2.1, b: -4.5, a: 0}
+    - _ClapPosition: {r: 0, g: 0, b: 0, a: 0}
     - _ClickPosition: {r: 3.5, g: 2.1, b: -4.5, a: 0}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 0}
