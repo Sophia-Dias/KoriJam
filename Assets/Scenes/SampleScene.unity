@@ -787,6 +787,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5167a486b798054e8e8c0faed1dcfa7, type: 3}
+--- !u!1001 &36894638028587323
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 36894637627842443, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: animatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: 6fdf49d0b3e09fb449c5233aa82184ec, type: 2}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.607
+      objectReference: {fileID: 0}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.305
+      objectReference: {fileID: 0}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 507123381293938812, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883403355498586822, guid: 2609d6878a026a2448c85a1b2ffa6b38,
+        type: 3}
+      propertyPath: m_Name
+      value: Mesa-de-cabeceira
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2609d6878a026a2448c85a1b2ffa6b38, type: 3}
 --- !u!1001 &485871038037494043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -955,7 +1029,7 @@ PrefabInstance:
     - target: {fileID: 3834067272518670884, guid: cedde0d08afd11e41baec4c0b88c15fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.74
+      value: 3.83
       objectReference: {fileID: 0}
     - target: {fileID: 3834067272518670884, guid: cedde0d08afd11e41baec4c0b88c15fa,
         type: 3}
@@ -965,7 +1039,7 @@ PrefabInstance:
     - target: {fileID: 3834067272518670884, guid: cedde0d08afd11e41baec4c0b88c15fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.64
+      value: 1.218
       objectReference: {fileID: 0}
     - target: {fileID: 3834067272518670884, guid: cedde0d08afd11e41baec4c0b88c15fa,
         type: 3}
