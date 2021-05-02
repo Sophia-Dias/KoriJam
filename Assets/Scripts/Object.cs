@@ -29,12 +29,23 @@ public class Object : MonoBehaviour
     rb.isKinematic = true;
   }
 
-  private void OnEnable() => PlayerEcholocaization.Instance.allObjects.Add(this);
-  private void OnDisable() => PlayerEcholocaization.Instance.allObjects.Remove(this);
+  private void OnEnable() => ObjectManager.Instance.allObjects.Add(this);
+  private void OnDisable() => ObjectManager.Instance.allObjects.Remove(this);
 
   public void MakeVisible(Vector3 clapPosition)
   {
     outline.SetVector("_ClapPosition", clapPosition);
     animator.SetTrigger("MakeVisible");
+  }
+
+  public void ActiveDebug()
+  {
+    outline.SetFloat("_DebugMode", 1f);
+    outline.SetVector("_ClapPosition", transform.position);
+  }
+
+  public void DeactiveDebug()
+  {
+    outline.SetFloat("_DebugMode", 0f);
   }
 }
