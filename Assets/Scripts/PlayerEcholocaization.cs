@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerEcholocaization : MonoBehaviour
 {
   public static PlayerEcholocaization Instance;
-  public List<Object> allObjects = new List<Object>();
+
   public PlayerEcholocaization me;
 
   private void Awake()
@@ -24,15 +24,9 @@ public class PlayerEcholocaization : MonoBehaviour
   {
     if (Input.GetButtonUp("Fire1"))
     {
-      AddOutLine();
+      ObjectManager.Instance.AddOutLine(transform.position);
     }
   }
 
-  private void AddOutLine()
-  {
-    foreach (Object gameObject in allObjects)
-    {
-      gameObject.MakeVisible(transform.position);
-    }
-  }
+
 }
