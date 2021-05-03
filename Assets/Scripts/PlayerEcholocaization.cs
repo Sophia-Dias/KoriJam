@@ -9,6 +9,9 @@ public class PlayerEcholocaization : MonoBehaviour
 
   public PlayerEcholocaization me;
 
+  public float cooldown;
+  public float recoverAt;
+
   private void Awake()
   {
     if (Instance == null)
@@ -20,12 +23,21 @@ public class PlayerEcholocaization : MonoBehaviour
     if (Instance != this) Destroy(this);
   }
 
+  private void Start()
+  {
+    recoverAt = 0;
+  }
+
   private void Update()
   {
+    recoverAt -= Time.deltaTime;
     if (!GameManager.Instance.CanMove()) return;
+    if (recoverAt > 0) return;
+
     if (Input.GetButtonUp("Fire1"))
     {
       ObjectManager.Instance.AddOutLine(transform.position);
+      recoverAt = cooldown;
     }
   }
 
