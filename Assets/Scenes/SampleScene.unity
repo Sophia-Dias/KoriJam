@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2411,8 +2411,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2077322, y: 3.0186958, z: 5.868345}
-  m_Center: {x: -0.017737389, y: 1.7230282, z: 3.6268582}
+  m_Size: {x: 0.2077322, y: 5.1952133, z: 5.868345}
+  m_Center: {x: -0.017737389, y: 0.63476944, z: 3.6268582}
 --- !u!1 &1097657503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2832,7 +2832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4322,8 +4322,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2077322, y: 3.0186958, z: 1.3114958}
-  m_Center: {x: -0.017737389, y: 1.7230282, z: 4.448586}
+  m_Size: {x: 0.2077322, y: 5.7008677, z: 1.3114958}
+  m_Center: {x: -0.017737389, y: 0.38194227, z: 4.448586}
 --- !u!1 &2062233168
 GameObject:
   m_ObjectHideFlags: 0
