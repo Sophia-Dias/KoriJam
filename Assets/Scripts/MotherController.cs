@@ -7,6 +7,7 @@ public class MotherController : MonoBehaviour
   public DialogObject dialog;
   private void OnTriggerEnter(Collider other)
   {
+    if (other.gameObject.layer != LayerMask.NameToLayer("Player")) return;
     DialogManager.Instance.OnFinish.AddListener(ShowCredits);
     DialogManager.Instance.StartDialog(dialog);
   }
