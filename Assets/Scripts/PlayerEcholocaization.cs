@@ -22,6 +22,7 @@ public class PlayerEcholocaization : MonoBehaviour
 
   private void Update()
   {
+    if (!GameManager.Instance.CanMove()) return;
     if (Input.GetButtonUp("Fire1"))
     {
       ObjectManager.Instance.AddOutLine(transform.position);
