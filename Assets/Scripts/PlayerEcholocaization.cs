@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerEcholocaization : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerEcholocaization : MonoBehaviour
 
   public float cooldown;
   public float recoverAt;
+  public Slider clapSlider;
 
   private AudioSource audioSource;
 
@@ -29,11 +31,13 @@ public class PlayerEcholocaization : MonoBehaviour
   {
     recoverAt = 0;
     audioSource = GetComponent<AudioSource>();
+    clapSlider.maxValue = cooldown;
   }
 
   private void Update()
   {
-    recoverAt -= Time.deltaTime;
+    if (recoverAt > 0) recoverAt -= Time.deltaTime;
+    clapSlider.value = cooldown - recoverAt;
     if (!GameManager.Instance.CanMove()) return;
     if (recoverAt > 0) return;
 
