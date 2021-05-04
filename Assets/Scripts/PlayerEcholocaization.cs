@@ -12,6 +12,8 @@ public class PlayerEcholocaization : MonoBehaviour
   public float cooldown;
   public float recoverAt;
 
+  private AudioSource audioSource;
+
   private void Awake()
   {
     if (Instance == null)
@@ -26,6 +28,7 @@ public class PlayerEcholocaization : MonoBehaviour
   private void Start()
   {
     recoverAt = 0;
+    audioSource = GetComponent<AudioSource>();
   }
 
   private void Update()
@@ -36,6 +39,7 @@ public class PlayerEcholocaization : MonoBehaviour
 
     if (Input.GetButtonUp("Fire1"))
     {
+      audioSource.Play();
       ObjectManager.Instance.AddOutLine(transform.position);
       recoverAt = cooldown;
     }
