@@ -1,12 +1,11 @@
-﻿using UnityEditor.Animations;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Object : MonoBehaviour
 {
   [SerializeField] private GameObject baseMesh;
   [SerializeField] private GameObject outlineMesh;
-  [SerializeField] private AnimatorController animatorController;
+  [SerializeField] private RuntimeAnimatorController animatorController;
 
   Animator animator;
   Rigidbody rb;
