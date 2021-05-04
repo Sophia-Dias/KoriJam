@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2702256674874906862}
   - component: {fileID: 2453020739077783288}
   - component: {fileID: 2453020739077783289}
+  - component: {fileID: 2427742666051078158}
   m_Layer: 0
   m_Name: "Vaso Sanit\xE1rio"
   m_TagString: Untagged
@@ -144,6 +145,19 @@ MonoBehaviour:
   baseMesh: {fileID: 5660585012542428898}
   outlineMesh: {fileID: 2548461220014313911}
   animatorController: {fileID: 9100000, guid: 6fdf49d0b3e09fb449c5233aa82184ec, type: 2}
+--- !u!65 &2427742666051078158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3371938882897085012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38451362, y: 0.46501493, z: 0.50691223}
+  m_Center: {x: 0, y: 0.2303245, z: -0.037168026}
 --- !u!1 &5660585012542428898
 GameObject:
   m_ObjectHideFlags: 0
