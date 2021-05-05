@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
   public GameObject creditCanvas;
   public GameState currentGameState { get; private set; }
+  public GameObject clapCanvas;
 
   private void Awake()
   {
@@ -25,12 +26,14 @@ public class GameManager : MonoBehaviour
   private void Start()
   {
     creditCanvas.SetActive(false);
+    clapCanvas.SetActive(true);
     currentGameState = GameState.Play;
   }
 
   public void ShowCredits()
   {
     creditCanvas.SetActive(true);
+    clapCanvas.SetActive(false);
     currentGameState = GameState.Stopped;
   }
 

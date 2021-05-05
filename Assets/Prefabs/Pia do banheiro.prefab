@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2548461220014313911
+--- !u!1 &1975919051343959342
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2464627789125132064}
-  - component: {fileID: 2110967915238642526}
-  - component: {fileID: 6069604938870205482}
+  - component: {fileID: 945197043697446519}
+  - component: {fileID: 6488888297508066974}
+  - component: {fileID: 4751271223150197100}
   m_Layer: 0
-  m_Name: "Vaso sanit\xE1rio-outline"
+  m_Name: Pia-outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2464627789125132064
+--- !u!4 &945197043697446519
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2548461220014313911}
+  m_GameObject: {fileID: 1975919051343959342}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.34023952, y: 0.16088843, z: 0.034287702}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2702256674874906862}
+  m_Father: {fileID: 8715654315331320607}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2110967915238642526
+--- !u!33 &6488888297508066974
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2548461220014313911}
-  m_Mesh: {fileID: 6243910501940293954, guid: e2bb61f2b9ac37f4089e0b024f671f85, type: 3}
---- !u!23 &6069604938870205482
+  m_GameObject: {fileID: 1975919051343959342}
+  m_Mesh: {fileID: 6469963032435382633, guid: ec6796a83c2e35e4bb46c9c5ac8f701e, type: 3}
+--- !u!23 &4751271223150197100
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2548461220014313911}
+  m_GameObject: {fileID: 1975919051343959342}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: e2bb61f2b9ac37f4089e0b024f671f85, type: 3}
+  - {fileID: 2100000, guid: 38782daaf3af5de4da076d75ea45b093, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &3371938882897085012
+--- !u!1 &8340642047918350757
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,40 +87,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2702256674874906862}
-  - component: {fileID: 2453020739077783288}
-  - component: {fileID: 2453020739077783289}
-  - component: {fileID: 2427742666051078158}
+  - component: {fileID: 8715654315331320607}
+  - component: {fileID: 6871951912124856650}
+  - component: {fileID: 1159674855793264961}
+  - component: {fileID: 2397200949794178106}
   m_Layer: 0
-  m_Name: "Vaso Sanit\xE1rio"
+  m_Name: Pia do banheiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2702256674874906862
+--- !u!4 &8715654315331320607
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3371938882897085012}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 8340642047918350757}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -2.881, y: 2.8963385, z: -3.256}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8933609322529928121}
-  - {fileID: 2464627789125132064}
+  - {fileID: 7300304520552881367}
+  - {fileID: 945197043697446519}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2453020739077783288
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!54 &6871951912124856650
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3371938882897085012}
+  m_GameObject: {fileID: 8340642047918350757}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -130,35 +130,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2453020739077783289
+--- !u!114 &1159674855793264961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3371938882897085012}
+  m_GameObject: {fileID: 8340642047918350757}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd2908fa8d7b352409f2c58bbd3a82bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMesh: {fileID: 5660585012542428898}
-  outlineMesh: {fileID: 2548461220014313911}
+  baseMesh: {fileID: 1975919051343959342}
+  outlineMesh: {fileID: 9074030387408410051}
   animatorController: {fileID: 9100000, guid: 6fdf49d0b3e09fb449c5233aa82184ec, type: 2}
---- !u!65 &2427742666051078158
+--- !u!65 &2397200949794178106
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3371938882897085012}
+  m_GameObject: {fileID: 8340642047918350757}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.38451362, y: 0.46501493, z: 0.50691223}
-  m_Center: {x: 0, y: 0.2303245, z: -0.037168026}
---- !u!1 &5660585012542428898
+  m_Size: {x: 1, y: 0.66523623, z: 0.5048874}
+  m_Center: {x: 1.009742e-28, y: 0.7328235, z: 0.000000029802322}
+--- !u!1 &9074030387408410051
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,45 +166,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8933609322529928121}
-  - component: {fileID: 8607716946287944666}
-  - component: {fileID: 1095365136295173347}
+  - component: {fileID: 7300304520552881367}
+  - component: {fileID: 1193891430974673842}
+  - component: {fileID: 2942037649903321442}
   m_Layer: 0
-  m_Name: "Vaso sanit\xE1rio"
+  m_Name: Pia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8933609322529928121
+--- !u!4 &7300304520552881367
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5660585012542428898}
+  m_GameObject: {fileID: 9074030387408410051}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.34023952, y: 0.16088843, z: 0.034287702}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2702256674874906862}
+  m_Father: {fileID: 8715654315331320607}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8607716946287944666
+--- !u!33 &1193891430974673842
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5660585012542428898}
-  m_Mesh: {fileID: -3551714615895953664, guid: e2bb61f2b9ac37f4089e0b024f671f85, type: 3}
---- !u!23 &1095365136295173347
+  m_GameObject: {fileID: 9074030387408410051}
+  m_Mesh: {fileID: -1530855934666777335, guid: ec6796a83c2e35e4bb46c9c5ac8f701e, type: 3}
+--- !u!23 &2942037649903321442
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5660585012542428898}
+  m_GameObject: {fileID: 9074030387408410051}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -216,7 +216,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: e2bb61f2b9ac37f4089e0b024f671f85, type: 3}
+  - {fileID: 2100000, guid: e0af8da00d1cbf94e8ded30c4065af26, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

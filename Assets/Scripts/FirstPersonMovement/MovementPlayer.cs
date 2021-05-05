@@ -1,75 +1,76 @@
 ﻿using UnityEngine;
 
-public class MovementPlayer : MonoBehaviour 
+public class MovementPlayer : MonoBehaviour
 {
-    CharacterController controller;
+  CharacterController controller;
 
-    Vector3 forward;
-    Vector3 strafe;
-    Vector3 vertical;
-	
-	float forwardInput;
-	float strafeInput;
+  Vector3 forward;
+  Vector3 strafe;
+  Vector3 vertical;
 
-    float forwardSpeed = 6f;
-    float strafeSpeed = 6f;
+  float forwardInput;
+  float strafeInput;
 
-    float gravity;
-    float jumpSpeed;
-    float maxJumpHeight = 2f;
-    float timeToMaxHeight = 0.5f;
+  float forwardSpeed = 6f;
+  float strafeSpeed = 6f;
 
-    void Start() 
-	{
-        controller = GetComponent<CharacterController>();
+  float gravity;
+  float jumpSpeed;
+  float maxJumpHeight = 2f;
+  float timeToMaxHeight = 0.5f;
 
-        gravity = (-2 * maxJumpHeight) / (timeToMaxHeight * timeToMaxHeight);
-        jumpSpeed = (2 * maxJumpHeight) / timeToMaxHeight;
+  void Start()
+  {
+    controller = GetComponent<CharacterController>();
 
+    gravity = (-2 * maxJumpHeight) / (timeToMaxHeight * timeToMaxHeight);
+    jumpSpeed = (2 * maxJumpHeight) / timeToMaxHeight;
+
+  }
+
+  void Update()
+  {
+    if (DialogManager.Instance.isTalking) return;
+    forwardInput = Input.GetAxisRaw("Vertical");
+    strafeInput = Input.GetAxisRaw("Horizontal");
+
+    ReceiveDirection();
+    Jump();
+
+    CheckCollision();
+
+    Vector3 finalVelocity = forward + strafe + vertical;
+    controller.Move(finalVelocity * Time.deltaTime);
+
+    if (controller.isGrounded)
+    {
+      vertical = Vector3.down;
     }
+  }
 
-    void Update() 
-	{
-        forwardInput = Input.GetAxisRaw("Vertical");
-        strafeInput = Input.GetAxisRaw("Horizontal");
+  void ReceiveDirection()
+  {
+    // force = input * speed * direction
+    forward = forwardInput * forwardSpeed * transform.forward;
+    strafe = strafeInput * strafeSpeed * transform.right;
+    vertical += gravity * Time.deltaTime * Vector3.up;
+  }
 
-		ReceiveDirection();
-		Jump();
+  void Jump()
+  {
+    // Debug.Log("Pulou");
 
-		CheckCollision();
-		
-        Vector3 finalVelocity = forward + strafe + vertical;
-        controller.Move(finalVelocity * Time.deltaTime);
-
-		if(controller.isGrounded)
-		{
-            vertical = Vector3.down;
-        }
+    if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
+    {
+      vertical = jumpSpeed * Vector3.up;
     }
-	
-	void ReceiveDirection()
-	{
-		// force = input * speed * direction
-        forward = forwardInput * forwardSpeed * transform.forward;
-        strafe = strafeInput * strafeSpeed * transform.right;
-        vertical += gravity * Time.deltaTime * Vector3.up;
-	}
-	
-	void Jump()
-	{
-		Debug.Log("Pulou");
-		
-        if(Input.GetKeyDown(KeyCode.Space) && controller.isGrounded) 
-		{
-            vertical = jumpSpeed * Vector3.up;
-        }
-	}
-	
-	void CheckCollision()
-	{
-		if (vertical.y > 0 && (controller.collisionFlags & CollisionFlags.Above) != 0)
-		{
-            vertical = Vector3.zero;
-        }
-	}
+  }
+
+  void CheckCollision()
+  {
+    if (vertical.y > 0 && (controller.collisionFlags & CollisionFlags.Above) != 0)
+    {
+      vertical = Vector3.zero;
+    }
+  }
 }

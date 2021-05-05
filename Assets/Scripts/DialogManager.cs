@@ -59,6 +59,7 @@ public class DialogManager : MonoBehaviour
     if (currentDialogIndex >= currentDialog.texts.Count)
     {
       CloseDialog();
+      return;
     }
 
     string textToShow = currentDialog.texts[currentDialogIndex];
