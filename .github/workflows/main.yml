@@ -5,8 +5,8 @@ env:
   itchio_channel: windows
 
 on:
-  pull_request:
-    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
 
   workflow_dispatch:
 
@@ -48,3 +48,15 @@ jobs:
         with:
           name: ${{ matrix.targetPlatform }}
           path: build
+
+      - name: Set Version
+        run: |
+          echo "version=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
+      - name: Upload ${{ matrix.preset }} to itch.io project
+        uses: robpc/itchio-upload-action@v1
+        with:
+          path: build/${{ matrix.targetPlatform }}
+          project: ${{ env.itchio_project }}
+          channel: ${{ env.itchio_channel }}
+          version: ${{ env.version }}
+          api-key: ${{ secrets.ITCHIO_API_KEY }}
