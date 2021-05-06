@@ -1,7 +1,7 @@
 name: Build and deploy
 
 env:
-  itchio_project: rqgodoy/project-name
+  itchio_project: rqgodoy/escurido-e-solido
   itchio_channel: windows
 
 on:
