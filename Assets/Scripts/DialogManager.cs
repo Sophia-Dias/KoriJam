@@ -27,7 +27,7 @@ public class DialogManager : MonoBehaviour
 
   private void Start()
   {
-    StartDialog(initial);
+    StartDialog(initial, PlayerEcholocaization.Instance.ClickingTongue);
   }
 
   private void Update()
