@@ -43,9 +43,14 @@ public class PlayerEcholocaization : MonoBehaviour
 
     if (Input.GetButtonUp("Fire1"))
     {
-      audioSource.Play();
-      ObjectManager.Instance.AddOutLine(transform.position);
-      recoverAt = cooldown;
+      ClickingTongue();
     }
+  }
+
+  public void ClickingTongue()
+  {
+    audioSource.Play();
+    ObjectManager.Instance.AddOutLine(transform.position);
+    recoverAt = cooldown;
   }
 }
