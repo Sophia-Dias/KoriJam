@@ -36,6 +36,8 @@ public class FirstPersonCamera : MonoBehaviour {
 
     void Update() 
 	{
+        if (!GameManager.Instance.CanMove()) return;
+        
         verticalDelta = Input.GetAxisRaw("Mouse Y") * sensitivityY;
         horizontalDelta = Input.GetAxisRaw("Mouse X") * sensitivityX;
 

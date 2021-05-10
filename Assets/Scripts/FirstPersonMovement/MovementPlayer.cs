@@ -15,7 +15,6 @@ public class MovementPlayer : MonoBehaviour
   float strafeSpeed = 6f;
 
   float gravity;
-  float jumpSpeed;
   float maxJumpHeight = 2f;
   float timeToMaxHeight = 0.5f;
 
@@ -23,9 +22,7 @@ public class MovementPlayer : MonoBehaviour
   {
     controller = GetComponent<CharacterController>();
 
-    gravity = (-2 * maxJumpHeight) / (timeToMaxHeight * timeToMaxHeight);
-    jumpSpeed = (2 * maxJumpHeight) / timeToMaxHeight;
-
+    gravity = -8f;
   }
 
   void Update()
@@ -35,7 +32,6 @@ public class MovementPlayer : MonoBehaviour
     strafeInput = Input.GetAxisRaw("Horizontal");
 
     ReceiveDirection();
-    Jump();
 
     CheckCollision();
 
@@ -54,16 +50,6 @@ public class MovementPlayer : MonoBehaviour
     forward = forwardInput * forwardSpeed * transform.forward;
     strafe = strafeInput * strafeSpeed * transform.right;
     vertical += gravity * Time.deltaTime * Vector3.up;
-  }
-
-  void Jump()
-  {
-    // Debug.Log("Pulou");
-
-    if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
-    {
-      vertical = jumpSpeed * Vector3.up;
-    }
   }
 
   void CheckCollision()

@@ -1,0 +1,19 @@
+name: Activation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  activation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Unity - Activate
+        id: getManualLicenseFile
+        uses: game-ci/unity-request-activation-file@v2
+      
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+          path: ${{ steps.getManualLicenseFile.outputs.filePath }}
