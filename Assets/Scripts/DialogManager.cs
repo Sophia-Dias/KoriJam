@@ -18,6 +18,7 @@ public class DialogManager : MonoBehaviour
   private bool canSwitch;
   public bool isTalking;
   public Action finishCallback;
+  public UnityEvent onStopTalking;
 
   private void Awake()
   {
@@ -27,6 +28,7 @@ public class DialogManager : MonoBehaviour
 
   private void Start()
   {
+    if(onStopTalking==null) onStopTalking = new UnityEvent();
     StartDialog(initial, PlayerEcholocaization.Instance.ClickingTongue);
   }
 
@@ -95,5 +97,6 @@ public class DialogManager : MonoBehaviour
     isTalking = false;
     textCanvas.SetActive(false);
     if (finishCallback != null) finishCallback();
+    onStopTalking.Invoke();
   }
 }
