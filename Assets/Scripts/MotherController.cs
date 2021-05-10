@@ -8,8 +8,7 @@ public class MotherController : MonoBehaviour
   private void OnTriggerEnter(Collider other)
   {
     if (!other.gameObject.CompareTag("Player")) return;
-    DialogManager.Instance.OnFinish.AddListener(ShowCredits);
-    DialogManager.Instance.StartDialog(dialog);
+    DialogManager.Instance.StartDialog(dialog, ShowCredits);
   }
 
   private void ShowCredits()
