@@ -36,18 +36,21 @@ public class PlayerEcholocaization : MonoBehaviour
 
   private void Update()
   {
+    if (!GameManager.Instance.CanMove()) return;
     if (recoverAt > 0) recoverAt -= Time.deltaTime;
     clapSlider.value = cooldown - recoverAt;
-    if (!GameManager.Instance.CanMove()) return;
     if (recoverAt > 0) return;
 
     if (Input.GetButtonUp("Fire1"))
     {
-      audioSource.Play();
-      ObjectManager.Instance.MakeClick(transform.position);
-      recoverAt = cooldown;
+      ClickingTongue();
     }
   }
 
-
+  public void ClickingTongue()
+  {
+    audioSource.Play();
+    ObjectManager.Instance.MakeClick(transform.position);
+    recoverAt = cooldown;
+  }
 }
