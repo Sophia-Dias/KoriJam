@@ -57,6 +57,6 @@ jobs:
         with:
           path: build/${{ matrix.targetPlatform }}
           project: ${{ env.itchio_project }}
-          channel: ${{ env.itchio_channel }}
+          channel: ${{ matrix.preset }}
           version: ${{ env.version }}-${{ matrix.targetPlatform }}
           api-key: ${{ secrets.ITCHIO_API_KEY }}
