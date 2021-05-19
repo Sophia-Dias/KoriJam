@@ -17,7 +17,8 @@ public class DialogManager : MonoBehaviour
   public DialogObject initial;
   private bool canSwitch;
   public bool isTalking;
-  public UnityEvent OnFinish;
+  public Action finishCallback;
+  public UnityEvent onStopTalking;
 
   private void Awake()
   {
@@ -27,8 +28,8 @@ public class DialogManager : MonoBehaviour
 
   private void Start()
   {
-    if (OnFinish == null) OnFinish = new UnityEvent();
-    StartDialog(initial);
+    if(onStopTalking==null) onStopTalking = new UnityEvent();
+    StartDialog(initial, PlayerEcholocaization.Instance.ClickingTongue);
   }
 
   private void Update()
@@ -41,7 +42,17 @@ public class DialogManager : MonoBehaviour
     }
   }
 
-  public void StartDialog(DialogObject dialog)
+  public void StartDialog(DialogObject dialog, Action finishCallback) {
+    this.finishCallback = finishCallback;
+    StartDialogSystem(dialog);
+  }
+
+  public void StartDialog(DialogObject dialog) {
+    this.finishCallback = null;
+    StartDialogSystem(dialog);
+  }
+
+  private void StartDialogSystem(DialogObject dialog)
   {
     currentDialog = dialog;
     currentDialogIndex = 0;
@@ -83,9 +94,9 @@ public class DialogManager : MonoBehaviour
 
   private void CloseDialog()
   {
-    Debug.Log("Fim");
     isTalking = false;
     textCanvas.SetActive(false);
-    OnFinish.Invoke();
+    if (finishCallback != null) finishCallback();
+    onStopTalking.Invoke();
   }
 }

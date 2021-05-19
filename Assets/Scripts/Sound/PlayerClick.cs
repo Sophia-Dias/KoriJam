@@ -2,25 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerClick : MonoBehaviour
+public class PlayerClick : SoundController
 {
-
-  private float range = 5f;
-  private List<Object> objectsOnRange;
-
   void Start()
   {
-    objectsOnRange = ObjectManager.Instance.GetObjectsOnRange(transform.position, range);
-    foreach (Object items in objectsOnRange)
-    {
-      items.MakeVisible(transform.position);
-    }
-
+    range = 5f;
     StartCoroutine(AutoDestroy());
   }
 
   private IEnumerator AutoDestroy() {
-    yield return new WaitForSeconds(5f);
+    yield return new WaitForSeconds(SoundManager.Instance.shaderDuration);
     Destroy(gameObject);
   }
 }
