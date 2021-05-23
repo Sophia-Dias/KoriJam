@@ -18,7 +18,7 @@ namespace Tests
       translationManagerGameObject = new GameObject();
       TranslationManager translation = translationManagerGameObject.AddComponent<TranslationManager>();
 
-      translation.translationCSV = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/__test__/resources/translationTestFile.CSV");
+      translation.translationCSV = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Translation/__tests__/resources/translationTestFile.CSV");
     }
 
     [TearDown]
