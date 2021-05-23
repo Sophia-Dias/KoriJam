@@ -50,7 +50,7 @@ public class PlayerEcholocaization : MonoBehaviour
   public void ClickingTongue()
   {
     audioSource.Play();
-    ObjectManager.Instance.AddOutLine(transform.position);
+    ObjectManager.Instance.MakeClick(transform.position);
     recoverAt = cooldown;
   }
 }
