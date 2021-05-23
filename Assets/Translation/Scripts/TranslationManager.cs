@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TranslationManager : MonoBehaviour
 {
@@ -8,9 +9,12 @@ public class TranslationManager : MonoBehaviour
 
   public TextAsset translationCSV;
 
+  public UnityEvent OnChangeLanguage;
+
   public string currentLanguage { get; private set; }
   private List<string> languages;
   private Dictionary<string, Dictionary<string, string>> texts;
+
 
 
   private void Awake() {
@@ -22,6 +26,8 @@ public class TranslationManager : MonoBehaviour
 
   private void Start()
   {
+    if (OnChangeLanguage == null) OnChangeLanguage = new UnityEvent();
+
     languages = GetLanguages();
     SetLanguage(languages[0]);
     List<string> textString = new List<string>(translationCSV.ToString().Split('\r'));
@@ -74,5 +80,6 @@ public class TranslationManager : MonoBehaviour
     if (!languages.Contains(newLanguage)) return;
     PlayerPrefs.SetString("Language", newLanguage);
     currentLanguage = newLanguage;
+    OnChangeLanguage.Invoke();
   }
 }
