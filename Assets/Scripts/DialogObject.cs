@@ -5,5 +5,13 @@ using UnityEngine;
 public class DialogObject : ScriptableObject
 {
   [TextArea(5, 20)]
-  public List<string> texts;
+  [SerializeField] private List<string> texts;
+
+  public string GetTranslatedText (int index) {
+    return TranslationManager.Instance.GetTranslation(texts[index]);
+  }
+
+  public int Count () {
+    return texts.Count;
+  }
 }

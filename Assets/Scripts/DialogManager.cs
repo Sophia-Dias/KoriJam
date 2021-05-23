@@ -67,13 +67,13 @@ public class DialogManager : MonoBehaviour
   {
     if (!canSwitch) return;
 
-    if (currentDialogIndex >= currentDialog.texts.Count)
+    if (currentDialogIndex >= currentDialog.Count())
     {
       CloseDialog();
       return;
     }
 
-    string textToShow = currentDialog.texts[currentDialogIndex];
+    string textToShow = currentDialog.GetTranslatedText(currentDialogIndex);
     textField.text = "";
     StartCoroutine(WriteText(textToShow));
     currentDialogIndex++;
