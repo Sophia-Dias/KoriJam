@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Mother
   m_EditorClassIdentifier: 
   texts:
-  - "Oi filha!\nVoc\xEA conseguiu vir at\xE9 aqui fora sozinha?\nVoc\xEA cresceu
-    tanto desde que ficou cega. Eu tenho muito orgulho de voc\xEA."
+  - MOM_DAUGTHER
+  - MOM_ALONE
+  - MOM_GROWN
+  - MOM_PROUD
