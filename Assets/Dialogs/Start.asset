@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   texts:
-  - "M\xE3e... M\xE3e...?"
-  - "A mam\xE3e deve estar na varanda.\nVou ter que me virar sozinha."
+  - KORILINE_MON
+  - KORILINE_WHERE
+  - KORILINE_MYSELF
