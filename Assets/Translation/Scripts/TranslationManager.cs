@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class TranslationManager : MonoBehaviour
 {
+  const char LINE_BREAK = '\n';
   public static TranslationManager Instance;
 
   public TextAsset translationCSV;
@@ -30,7 +31,7 @@ public class TranslationManager : MonoBehaviour
 
     languages = GetLanguages();
     SetLanguage(languages[0]);
-    List<string> textString = new List<string>(translationCSV.ToString().Split('\r'));
+    List<string> textString = new List<string>(translationCSV.ToString().Split(LINE_BREAK));
     textString.RemoveAt(0);
     LoadTranslationData(textString);
   }
@@ -60,7 +61,7 @@ public class TranslationManager : MonoBehaviour
   }
 
   public List<string> GetLanguages () {
-    string translationHeader = translationCSV.ToString().Split('\r')[0].Trim();
+    string translationHeader = translationCSV.ToString().Split(LINE_BREAK)[0].Trim();
     List<string> languages = new List<string>(translationHeader.Split(';'));
 
     languages.RemoveAt(0);
