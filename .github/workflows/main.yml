@@ -26,14 +26,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Cache multiple paths
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/cache
-            !~/cache/exclude
-          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
-
       - name: Build project
         uses: webbertakken/unity-builder@v2
         env:
