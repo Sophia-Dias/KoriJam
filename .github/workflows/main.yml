@@ -33,6 +33,7 @@ jobs:
         with:
           unityVersion: 2019.4.25f1
           targetPlatform: ${{ matrix.targetPlatform }}
+          allowDirtyBuild: true
 
       - name: Create artifact
         uses: actions/upload-artifact@v2
