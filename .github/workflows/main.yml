@@ -5,23 +5,22 @@ env:
   itchio_channel: windows
 
 on:
-#  pull_request:
-#    branches: [ main ]
+  #  pull_request:
+  #    branches: [ main ]
 
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     strategy:
       fail-fast: false
       matrix:
         targetPlatform:
-            - StandaloneWindows
-            - StandaloneWindows64
-            - StandaloneLinux64
-
+          - StandaloneWindows
+          - StandaloneWindows64
+          - StandaloneLinux64
 
     steps:
       - uses: actions/checkout@v2
